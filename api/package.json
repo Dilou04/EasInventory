@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.4.1",
+    "@fastify/multipart": "^10.1.8",
+    "@fastify/static": "^10.1.10",
+    "better-sqlite3": "^13.0.3",
+    "fastify": "^5.12.8"
+  }
+}
