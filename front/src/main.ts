@@ -447,57 +447,57 @@ function initSearch() {
 // Fonction pour reset les pop up à la fermeture
 // ---------------------------------------------
 
-function resetAddProductForm(){
+function resetAddProductForm() {
   const txtProduct = document.querySelector<HTMLInputElement>('#txt-product');
   const txtQuantite = document.querySelector<HTMLInputElement>('#txt-quantite');
   const selectLieu = document.querySelector<HTMLSelectElement>('#select-lieu');
   const inputImg = document.querySelector<HTMLInputElement>('#img-product');
   const previewImg = document.querySelector<HTMLImageElement>('#img-preview');
 
-  if(txtProduct){
+  if (txtProduct) {
     txtProduct.value = "";
   }
-  if (txtQuantite){
+  if (txtQuantite) {
     txtQuantite.value = "";
   }
-  if (selectLieu){
+  if (selectLieu) {
     selectLieu.value = "";
   }
-  if (inputImg){
+  if (inputImg) {
     inputImg.value = "";
   }
-  if (previewImg){
+  if (previewImg) {
     previewImg.src = "";
     previewImg.style.display = "none";
   }
 }
 
-function resetStockForm(){
+function resetStockForm() {
   const selectStock = document.querySelector<HTMLSelectElement>('#select-stock');
   const txtAjouterStock = document.querySelector<HTMLInputElement>('#txt-ajout-stock');
   const stockActuel = document.querySelector<HTMLElement>('#stock-actuel');
 
-  if (selectStock){
+  if (selectStock) {
     selectStock.value = "";
   }
-  if (txtAjouterStock){
+  if (txtAjouterStock) {
     txtAjouterStock.value = "";
   }
-  if (stockActuel){
+  if (stockActuel) {
     stockActuel.textContent = "";
   }
 }
 
-function resetLieuForm(){
+function resetLieuForm() {
   const txtLieu = document.querySelector<HTMLInputElement>('#txt-lieu');
-  if (txtLieu){
+  if (txtLieu) {
     txtLieu.value = "";
   }
 }
 
 // Appel de la fonction qui permet de reset les champs lors de la fermeture du pop up d'ajout de produit
 const modalAddProduct = document.querySelector<HTMLDialogElement>('#modal-add-product');
-if(modalAddProduct){
+if (modalAddProduct) {
   modalAddProduct.addEventListener("close", resetAddProductForm)
 }
 

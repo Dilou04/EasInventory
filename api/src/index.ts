@@ -206,4 +206,10 @@ fastify.post("/stocks", (request, reply ) => {
     return reply.send({ quantite : ligne.quantite});
 })
 
+fastify.get("/inventory", (request, reply) =>{
+    const query = db.prepare("SELECT nom, date FROM inventaire ");
+    const inventory = query.all();
+    reply.send(inventory);
+})
+
 fastify.listen({ port: 3000 });
